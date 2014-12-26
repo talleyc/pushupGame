@@ -13,6 +13,8 @@
 		5B3527981A4A9EB00074D407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3527971A4A9EB00074D407 /* Images.xcassets */; };
 		5B35279B1A4A9EB00074D407 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3527991A4A9EB00074D407 /* LaunchScreen.xib */; };
 		5B3527A71A4A9EB00074D407 /* Pushup_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527A61A4A9EB00074D407 /* Pushup_GameTests.swift */; };
+		5B3527B11A4D71AD0074D407 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B01A4D71AD0074D407 /* Deck.swift */; };
+		5B3527B31A4D71E50074D407 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B21A4D71E50074D407 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		5B3527A01A4A9EB00074D407 /* Pushup GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pushup GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3527A51A4A9EB00074D407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3527A61A4A9EB00074D407 /* Pushup_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pushup_GameTests.swift; sourceTree = "<group>"; };
+		5B3527B01A4D71AD0074D407 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		5B3527B21A4D71E50074D407 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		5B3527821A4A9EB00074D407 = {
 			isa = PBXGroup;
 			children = (
+				5B3527B01A4D71AD0074D407 /* Deck.swift */,
+				5B3527B21A4D71E50074D407 /* Card.swift */,
 				5B35278D1A4A9EB00074D407 /* Pushup Game */,
 				5B3527A31A4A9EB00074D407 /* Pushup GameTests */,
 				5B35278C1A4A9EB00074D407 /* Products */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3527B11A4D71AD0074D407 /* Deck.swift in Sources */,
 				5B3527931A4A9EB00074D407 /* ViewController.swift in Sources */,
 				5B3527911A4A9EB00074D407 /* AppDelegate.swift in Sources */,
+				5B3527B31A4D71E50074D407 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
