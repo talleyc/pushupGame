@@ -11,6 +11,9 @@ import Foundation
 class Deck {
     var deck :Array<Card>
     var nextCardIndex :Int
+    var deckSize :Int {
+        return deck.count
+    }
     
     init() {
         deck = Array<Card>()
@@ -41,13 +44,11 @@ class Deck {
         nextCardIndex = 0
     }
     
-    func getNextCard() -> Card {
-        if nextCardIndex < deck.count {
-            nextCardIndex += 1
-            return deck[nextCardIndex - 1]
-        } else {
-            return deck[nextCardIndex - 1]
+    func getCard(index :Int) ->Card {
+        if index < deck.count {
+            return deck[index]
         }
+        return Card()
     }
     
 }
