@@ -42,10 +42,8 @@ class Game {
         }
     }
     
-    func startGame(numPlayers :Int) -> Card {
-        for i in 0 ..< numPlayers {
-            players.append(Player())
-        }
+    func startGame(p :Array<Player>) -> Card {
+        players = p
         active = true
         players[0].startNextTurn(deck.getCard(0))
         return deck.getCard(0)

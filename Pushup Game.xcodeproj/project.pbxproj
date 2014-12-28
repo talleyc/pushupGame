@@ -18,6 +18,7 @@
 		5B3527B51A4E074B0074D407 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B41A4E074B0074D407 /* Player.swift */; };
 		5B3527B71A4E075D0074D407 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B61A4E075D0074D407 /* Turn.swift */; };
 		5B3527B91A4EA32B0074D407 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B81A4EA32B0074D407 /* Game.swift */; };
+		5B3527BB1A4F870E0074D407 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527BA1A4F870E0074D407 /* SetupController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5B3527B41A4E074B0074D407 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		5B3527B61A4E075D0074D407 /* Turn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		5B3527B81A4EA32B0074D407 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5B3527BA1A4F870E0074D407 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		5B3527821A4A9EB00074D407 = {
 			isa = PBXGroup;
 			children = (
+				5B3527BA1A4F870E0074D407 /* SetupController.swift */,
 				5B3527B81A4EA32B0074D407 /* Game.swift */,
 				5B3527B41A4E074B0074D407 /* Player.swift */,
 				5B3527B61A4E075D0074D407 /* Turn.swift */,
@@ -232,6 +235,7 @@
 				5B3527B91A4EA32B0074D407 /* Game.swift in Sources */,
 				5B3527911A4A9EB00074D407 /* AppDelegate.swift in Sources */,
 				5B3527B51A4E074B0074D407 /* Player.swift in Sources */,
+				5B3527BB1A4F870E0074D407 /* SetupController.swift in Sources */,
 				5B3527B71A4E075D0074D407 /* Turn.swift in Sources */,
 				5B3527B31A4D71E50074D407 /* Card.swift in Sources */,
 			);

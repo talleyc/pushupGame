@@ -10,6 +10,7 @@ import Foundation
 
 class Player {
     var turns :Array<Turn>
+    var name :String
     var currentTurn :Turn{
         get {
             return turns[turns.count - 1]
@@ -29,6 +30,12 @@ class Player {
     
     init() {
         turns = Array<Turn>()
+        name = "bill"
+    }
+    
+    init(newName :String) {
+        turns = Array<Turn>()
+        name = newName
     }
     
     func startNextTurn(card :Card) {

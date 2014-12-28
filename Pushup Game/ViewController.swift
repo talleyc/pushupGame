@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardButton: UIButton!
     @IBOutlet weak var reshuffleButton: UIButton!
+    @IBOutlet weak var currentPlayerNameLabel: UILabel!
     var game = Game()
+    var players :Array<Player>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayCard(game.startGame(2))
+        displayCard(game.startGame(players!))
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,15 +37,17 @@ class ViewController: UIViewController {
     @IBAction func onClickReshuffle(sender :AnyObject) {
         addAlert()        
         game = Game()
-        displayCard(game.startGame(2))
+        displayCard(game.startGame(players!))
         
     }
+
     
     func addAlert() {
         var alert = UIAlertController(title: "Alert", message: constructAlertMessage(), preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
     
     func constructAlertMessage() -> String {
         var message = ""
@@ -52,6 +56,7 @@ class ViewController: UIViewController {
     }
     
     func displayCard(card :Card) {
+        currentPlayerNameLabel.text = game.players[game.currentPlayerIndex].name
         cardImage.image = card.image
     }
 
