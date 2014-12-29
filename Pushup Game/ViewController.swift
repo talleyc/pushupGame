@@ -51,7 +51,9 @@ class ViewController: UIViewController {
     
     func constructAlertMessage() -> String {
         var message = ""
-        message += "Total pushups: \(game.players[0].totalPushups)\nSeconds per pushup: \(game.players[0].secondsPerPushup())"
+        for player in players {
+            message += "\(player.name)'s Total pushups: \(player.totalPushups)\nSeconds per pushup: \(player.secondsPerPushup())\n========\n"
+        }
         return message
     }
     

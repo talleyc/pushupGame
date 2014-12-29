@@ -44,6 +44,9 @@ class Game {
     
     func startGame(p :Array<Player>) -> Card {
         players = p
+        for player in players {
+            player.turns = Array<Turn>()
+        }
         active = true
         players[0].startNextTurn(deck.getCard(0))
         return deck.getCard(0)
