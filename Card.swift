@@ -19,7 +19,7 @@ class Card {
     
     var image :UIImage {
         get {
-            if ( self.level < 0 || self.level > 51 || find(Card.suits, self.suit) == nil) {
+            if ( self.level < 0 || self.level > 13 || find(Card.suits, self.suit) == nil) {
                 return UIImage(named: "j1.png")!
             } else {
                 return UIImage(named: "\(level)\(suit).png")!

@@ -27,11 +27,7 @@ class Player {
             return pushups
         }
     }
-    
-    init() {
-        turns = Array<Turn>()
-        name = "bill"
-    }
+
     
     init(newName :String) {
         turns = Array<Turn>()
@@ -45,6 +41,12 @@ class Player {
     func endCurrentTurn() {
         if currentTurn.active {
             currentTurn.end()
+        }
+    }
+    
+    func deleteCurrentTurn() {
+        if turns.count > 0 && turns[turns.count - 1].active {
+            turns.removeLast()
         }
     }
     

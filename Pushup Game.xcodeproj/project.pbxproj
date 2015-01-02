@@ -19,6 +19,7 @@
 		5B3527B71A4E075D0074D407 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B61A4E075D0074D407 /* Turn.swift */; };
 		5B3527B91A4EA32B0074D407 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527B81A4EA32B0074D407 /* Game.swift */; };
 		5B3527BB1A4F870E0074D407 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3527BA1A4F870E0074D407 /* SetupController.swift */; };
+		5B81D52A1A5633BC004C7DBF /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81D5291A5633BC004C7DBF /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5B3527B61A4E075D0074D407 /* Turn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		5B3527B81A4EA32B0074D407 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5B3527BA1A4F870E0074D407 /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		5B81D5291A5633BC004C7DBF /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				5B3527901A4A9EB00074D407 /* AppDelegate.swift */,
 				5B3527921A4A9EB00074D407 /* ViewController.swift */,
 				5B3527941A4A9EB00074D407 /* Main.storyboard */,
+				5B81D5291A5633BC004C7DBF /* ResultsViewController.swift */,
 				5B3527971A4A9EB00074D407 /* Images.xcassets */,
 				5B3527991A4A9EB00074D407 /* LaunchScreen.xib */,
 				5B35278E1A4A9EB00074D407 /* Supporting Files */,
@@ -235,6 +238,7 @@
 				5B3527B91A4EA32B0074D407 /* Game.swift in Sources */,
 				5B3527911A4A9EB00074D407 /* AppDelegate.swift in Sources */,
 				5B3527B51A4E074B0074D407 /* Player.swift in Sources */,
+				5B81D52A1A5633BC004C7DBF /* ResultsViewController.swift in Sources */,
 				5B3527BB1A4F870E0074D407 /* SetupController.swift in Sources */,
 				5B3527B71A4E075D0074D407 /* Turn.swift in Sources */,
 				5B3527B31A4D71E50074D407 /* Card.swift in Sources */,
@@ -429,6 +433,7 @@
 				5B3527AC1A4A9EB00074D407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B3527AD1A4A9EB00074D407 /* Build configuration list for PBXNativeTarget "Pushup GameTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +442,7 @@
 				5B3527AF1A4A9EB00074D407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

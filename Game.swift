@@ -11,13 +11,19 @@ import Foundation
 class Game {
     var deck :Deck
     var players :Array<Player>
-    var active :Bool
     var turnIndex :Int
+    var stage :Int //0 = game has not yet started. 1 = in progress. 2 = game over.
+    var active :Bool {
+        return stage == 1
+    }
     var currentCardIndex :Int {
         return turnIndex % deck.deckSize
     }
     var currentPlayerIndex :Int {
         return turnIndex % players.count
+    }
+    var currentCard :Card {
+        return deck.deck[currentCardIndex]
     }
     
     init() {
@@ -25,7 +31,7 @@ class Game {
         deck = Deck()
         deck.shuffle()
         players = Array<Player>()
-        active = false
+        stage = 0
         turnIndex = 0
     }
     
@@ -34,7 +40,7 @@ class Game {
         turnIndex++
         var nextCard = deck.getCard(turnIndex)
         if nextCard.level < 1 {
-            active = false
+            self.endGame()
             return nextCard
         } else {
             players[currentPlayerIndex].startNextTurn(nextCard)
@@ -47,11 +53,14 @@ class Game {
         for player in players {
             player.turns = Array<Turn>()
         }
-        active = true
+        stage = 1
         players[0].startNextTurn(deck.getCard(0))
         return deck.getCard(0)
     }
     
-    
+    func endGame() {
+        players[currentPlayerIndex].deleteCurrentTurn()
+        stage = 2
+    }
     
 }

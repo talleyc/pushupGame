@@ -135,13 +135,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69M-Tm-oIn">
-                                <rect key="frame" x="59" y="104" width="202" height="278"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2sF-pc-NKB" appends="YES" id="vFi-AD-5mJ"/>
-                                </connections>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDo-yi-PoO">
                                 <rect key="frame" x="16" y="64" width="288" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -151,7 +144,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB6-x1-sYd">
                                 <rect key="frame" x="105" y="401" width="111" height="43"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.8666666666666667" blue="0.086274509803921567" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="New Game">
+                                <state key="normal" title="End Game">
                                     <color key="titleColor" red="1" green="0.035294117647058823" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -161,9 +154,16 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onClickReshuffle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Kc-Yg-Fdo"/>
+                                    <segue destination="Mrc-Le-vv6" kind="push" identifier="gameToResults" id="drj-5o-hiE"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69M-Tm-oIn">
+                                <rect key="frame" x="59" y="104" width="202" height="278"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2sF-pc-NKB" appends="YES" id="vFi-AD-5mJ"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.16663938559983965" green="0.50058306703467315" blue="0.74501103940217384" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -181,7 +181,26 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="187" y="86"/>
+            <point key="canvasLocation" x="155" y="89"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="2LH-Fi-xru">
+            <objects>
+                <viewController id="Mrc-Le-vv6" customClass="ResultsViewController" customModule="Pushup_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HcA-60-kGw"/>
+                        <viewControllerLayoutGuide type="bottom" id="1g0-35-GHs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kls-Ek-6yH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.16470588235294117" green="0.50196078431372548" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="XXH-cE-qY5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQ3-MW-gWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608" y="89"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

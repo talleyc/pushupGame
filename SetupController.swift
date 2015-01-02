@@ -20,7 +20,6 @@ class SetupController: UIViewController {
         var nameFields = getNameFields()
         let userDefaults = NSUserDefaults.standardUserDefaults()
         for i in 1...4 {
-            //if let highscore = userDefaults.valueForKey("highscore") {
             if let defaultName = userDefaults.objectForKey("player\(i)") as String! {
                 nameFields[i-1].text = defaultName
             }

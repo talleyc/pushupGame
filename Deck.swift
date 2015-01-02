@@ -15,6 +15,7 @@ class Deck {
         return deck.count
     }
     
+    
     init() {
         deck = Array<Card>()
         nextCardIndex = 0
