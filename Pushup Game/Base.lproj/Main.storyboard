@@ -31,75 +31,6 @@
                     <view key="view" contentMode="scaleToFill" id="Qvo-eX-kNF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arx-2S-uuQ">
-                                <rect key="frame" x="128" y="279" width="64" height="31"/>
-                                <color key="backgroundColor" red="0.90111243206521741" green="0.86688943916536376" blue="0.085254621073659803" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="GO!">
-                                    <color key="titleColor" red="0.93709663722826086" green="0.023138188573537305" blue="0.023138188573537305" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="setupToGame" id="nuq-3S-bpG"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-Vr-j0G">
-                                <rect key="frame" x="112" y="127" width="101" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <accessibility key="accessibilityConfiguration" hint=""/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Contender 1"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymr-1I-Kct">
-                                <rect key="frame" x="112" y="203" width="101" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" hint="Contender 3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Contender 3"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-TS-TK9">
-                                <rect key="frame" x="112" y="241" width="101" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" hint="Contender 4"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Contender 4"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHX-wC-W3l">
-                                <rect key="frame" x="112" y="165" width="101" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" hint=""/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Contender 2"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frr-3Q-jbx">
-                                <rect key="frame" x="16" y="114" width="288" height="3"/>
-                                <color key="backgroundColor" red="0.62170299409464047" green="0.90117612092391308" blue="0.40985162161118377" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Up To 4 Names" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8B-Za-Bhe">
-                                <rect key="frame" x="59" y="72" width="202" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.91600451090123325" blue="0.18684605428059042" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.1666393856" green="0.50058306699999999" blue="0.74501103940000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
@@ -108,10 +39,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Setup" id="9cQ-Od-VaZ"/>
                     <connections>
-                        <outlet property="player1NameField" destination="aXs-Vr-j0G" id="5RG-c0-Xsu"/>
-                        <outlet property="player2NameField" destination="xHX-wC-W3l" id="XIQ-tw-p8I"/>
-                        <outlet property="player3NameField" destination="ymr-1I-Kct" id="hut-q1-U5h"/>
-                        <outlet property="player4NameField" destination="NLU-TS-TK9" id="jNW-Gd-2p2"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="setupToGame" id="1Rt-fD-Tu2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgf-i6-AFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,6 +54,7 @@
         <!--Pushup Game-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pushup_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="99a-O5-nHw"/>
@@ -134,52 +63,13 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDo-yi-PoO">
-                                <rect key="frame" x="16" y="64" width="288" height="40"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.91764705882352937" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB6-x1-sYd">
-                                <rect key="frame" x="105" y="401" width="111" height="43"/>
-                                <color key="backgroundColor" red="0.90196078431372551" green="0.8666666666666667" blue="0.086274509803921567" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="End Game">
-                                    <color key="titleColor" red="1" green="0.035294117647058823" blue="0.035294117647058823" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Mrc-Le-vv6" kind="push" identifier="gameToResults" id="drj-5o-hiE"/>
-                                </connections>
-                            </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69M-Tm-oIn">
-                                <rect key="frame" x="59" y="104" width="202" height="278"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2sF-pc-NKB" appends="YES" id="vFi-AD-5mJ"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="0.16663938559983965" green="0.50058306703467315" blue="0.74501103940217384" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pushup Game" id="RMb-hz-Ip9"/>
                     <connections>
-                        <outlet property="CardImage" destination="69M-Tm-oIn" id="tfR-P3-zIl"/>
-                        <outlet property="cardImage" destination="69M-Tm-oIn" id="pQd-WX-fDJ"/>
-                        <outlet property="currentPlayerNameLabel" destination="sDo-yi-PoO" id="8mN-G7-SZi"/>
+                        <segue destination="Mrc-Le-vv6" kind="push" identifier="gameToResults" id="KEb-Zz-aMF"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="2sF-pc-NKB">
-                    <connections>
-                        <action selector="onTouchCard:" destination="vXZ-lx-hvc" id="Sai-PI-AmJ"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="155" y="89"/>
         </scene>
