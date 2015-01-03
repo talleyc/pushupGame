@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FAE4C82F479C6B7E5A7FBB6"
+               BlueprintIdentifier = "65A446D628309D6829D16D8B"
                BuildableName = "libPods-Pushup Game.a"
                BlueprintName = "Pods-Pushup Game"
                ReferencedContainer = "container:Pods.xcodeproj">
