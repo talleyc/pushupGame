@@ -8,6 +8,7 @@
 
 import UIKit
 import Darwin
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     var instructionLabel :UILabel!
     var game :Game!
     var players :Array<Player>!
+    var soundEffectPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +27,15 @@ class ViewController: UIViewController {
         cardImage.image = UIImage(named: "back_of_card.png")
     }
     
+    override func viewWillAppear(animated: Bool) {        
+        playSoundEffect("shuffle.mp3")
+
+    }
     
-    override func viewDidAppear(animated :Bool) {
-        instructionLabel.frame = CGRectMake(-100,self.cardImage.frame.origin.y,  self.cardImage.frame.width, cardImage.frame.height)
+    override func viewDidAppear(animated :Bool) {        instructionLabel.frame = CGRectMake(-100,self.cardImage.frame.origin.y,  self.cardImage.frame.width, cardImage.frame.height)
         game = Game()
         instructionLabel.hidden = false
+        
         UIView.animateWithDuration(0.7, delay:0.0, options: .CurveEaseOut, animations: {
             
             self.view.addSubview(self.instructionLabel)
@@ -57,9 +63,11 @@ class ViewController: UIViewController {
     
     func onTouchCard(sender: UIGestureRecognizer) {
         if game != nil && game.active {
+            playSoundEffect("card_flip.mp3")
             displayCard(game.startNextTurn())
         } else if game.stage == 0 {
             instructionLabel.hidden = true
+            playSoundEffect("card_flip.mp3")
             game = Game()
             displayCard(game.startGame(players!))
         }
@@ -72,6 +80,24 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    func playSoundEffect(filename: String) {
+        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: nil)
+        if (url == nil) {
+            println("Could not find file: \(filename)")
+            return
+        }
+        
+        var error: NSError? = nil
+        soundEffectPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+        if let player = soundEffectPlayer {
+            player.numberOfLoops = 0
+            player.prepareToPlay()
+            player.play()
+        } else {
+            println("Could not create audio player: \(error!)")
+        }
+    }
     
     /*
         RENDERING LOGIC
@@ -92,7 +118,7 @@ class ViewController: UIViewController {
         currentPlayerNameLabel = UILabel(frame:CGRectMake(labelX,labelY,labelWidth, labelHeight))
         currentPlayerNameLabel.textColor = UIColor(red: 1, green: 234/255, blue: 48/255, alpha: 1)
         currentPlayerNameLabel.textAlignment = NSTextAlignment.Center
-        currentPlayerNameLabel.font = UIFont.boldSystemFontOfSize(20)
+        currentPlayerNameLabel.font = UIFont.boldSystemFontOfSize(26)
         currentPlayerNameLabel.numberOfLines = 1
         self.view.addSubview(currentPlayerNameLabel)
     }
@@ -119,7 +145,7 @@ class ViewController: UIViewController {
     
     func placeCardImage() {
         let cardHeight = self.view.frame.height * 0.5
-        let cardWidth = 72 / 96 * cardHeight
+        let cardWidth = 5 / 7 * cardHeight
         let cardX = CGFloat(self.view.center.x - (cardWidth / 2))
         let cardY = currentPlayerNameLabel.frame.origin.y + currentPlayerNameLabel.frame.height
         cardImage = UIImageView(image: UIImage(named: "back_of_card.png"))
